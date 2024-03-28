@@ -30,22 +30,27 @@ export default ({ navigation }) => {
                             <Image style={Estilo.tamImage} source={require('../../assets/pizza.png')} />
                         </View>
 
-                        <Text>Nome</Text>
+                        <Text>Nome:</Text>
                         <TextInput 
+                            style = {Estilo.TextInput} 
                             placeholder='Digite seu nome' 
                             value={nome} 
                             onChangeText={text => setNome(text)} />
-                        <Text>Email</Text>
-                        <TextInput 
+                        <Text>Email:</Text>
+                        <TextInput
+                            style = {Estilo.TextInput}
                             placeholder='Digite seu email' 
                             value={email} 
                             onChangeText={text => setEmail(text)} />
-                        <Text>Telefone</Text>
-                        <TextInput 
+                        <Text>Telefone:</Text>
+                        <TextInput
+                            style = {Estilo.TextInput} 
                             placeholder='Digite seu telefone' 
                             value={telefone} 
                             onChangeText={text => setTelefone(text)} />
+                        <View style= {Estilo.button}>
                         <Button title='CADASTRAR' color={'#008000'} onPress={irParaCardapio} disabled={!botaoHabilitado} />
+                        </View>
                     </View>
                 </SafeAreaView>
             </View>

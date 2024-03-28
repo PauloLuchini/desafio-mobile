@@ -64,7 +64,7 @@ export default ({ navigation }) => {
         <ScrollView>
             <View style={Estilo.viewSafeAndroid}>
                 <SafeAreaView>
-                    <View style={Estilo.divPrin}>
+                    <View>
                         <Text style={Estilo.h1}>PIZZARIA FIAP</Text>
                     </View>
 
@@ -74,18 +74,20 @@ export default ({ navigation }) => {
                     </View>
 
                     {pizzas.map(pizza => (
-                        <View key={pizza.key}>
+                        <View style={Estilo.divPrin} key={pizza.key}>
                             <View>
                                 <Image style={Estilo.tamImage} source={pizza.image} />
                             </View>
                             <Text>{pizza.name}</Text>
                             <Text>{pizza.ingredients}</Text>
                             <Text>{pizza.price}</Text>
-                            <Button title="Adicionar Pizza ao Carrinho" onPress={() => storePreference(pizza.key)} />
+                        <View style= {Estilo.button}>
+                            <Button color = '#df0000'title="Adicionar Pizza ao Carrinho" onPress={() => storePreference(pizza.key)} />
+                        </View>
                         </View>
                     ))}
                     
-                    <Button title="Ir para o carrinho" onPress={irParaCarrinho} />
+                    <Button color = '#df0000' title="Ir para o carrinho" onPress={irParaCarrinho} />
 
                 </SafeAreaView>
             </View>

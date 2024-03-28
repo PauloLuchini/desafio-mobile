@@ -29,14 +29,16 @@ export default ({ navigation }) => {
                             <Image style={Estilo.tamImage} source={require('../../assets/pizza.png')} />
                         </View>
 
-                        <Text>Nome</Text>
+                        <Text>Nome:</Text>
                         <TextInput
+                            style = {Estilo.TextInput} 
                             placeholder='Digite seu nome'
                             value={nome}
                             onChangeText={text => setNome(text)}
                         />
-                        <Text>Email</Text>
+                        <Text>Email:</Text>
                         <TextInput
+                            style = {Estilo.TextInput} 
                             placeholder='Digite seu email'
                             value={email}
                             onChangeText={text => setEmail(text)}

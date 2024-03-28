@@ -13,7 +13,7 @@ export default StyleSheet.create({
     fontWeight: 'bold',
     fontFamily: 'children',
     color: '#ff2200',
-    margin: '10%',
+    margin: '5%',
   },
   tamImage: {
     width: 250,
@@ -27,12 +27,12 @@ export default StyleSheet.create({
   },
   divPrin: {
     alignItems: 'center',
-    paddingBottom: 50,
+    paddingBottom: 20,
   },
   textPizza: {
     alignItems: 'center',
     textAlign: 'center',
-    marginBottom: '40%',
+    marginBottom: '10%',
   },
   textPizzaH1: {
     fontSize: 30,
@@ -69,6 +69,7 @@ export default StyleSheet.create({
     shadowRadius: 2,
     elevation: 5,
     marginBottom: '10%',
+    marginTop: '10%',
   },
   footer:{
     width: '100%',
@@ -92,5 +93,12 @@ export default StyleSheet.create({
       fontSize: 16,
       fontStyle: 'italic',
       color: 'gray',
+  },
+  TextInput:{
+    height: 40,
+    borderColor: '#ff0000',
+    borderWidth: 3,
+    borderRadius: 5,
+    paddingLeft: 10,
   },
 });

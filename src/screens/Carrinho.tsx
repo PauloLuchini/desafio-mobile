@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View, SafeAreaView, ScrollView, Alert, Image} from 'react-native';
+import { Text, View, SafeAreaView, ScrollView, Alert, Image, Button} from 'react-native';
 import Estilo from '../../components/Estilo';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-const Carrinho = () => {
+const Carrinho = ({ navigation }) => {
     const [storedPreferences, setStoredPreferences] = useState({});
 
     useEffect(() => {
@@ -27,6 +27,10 @@ const Carrinho = () => {
         }
     };
 
+    function irParaCardapio() {
+        navigation.navigate('(Cardapio)')
+    }
+
     return (
         <ScrollView>
             <View style={Estilo.viewSafeAndroid}>
@@ -48,6 +52,9 @@ const Carrinho = () => {
                         ) : (
                             <Text>Nenhuma preferência de pizza selecionada.</Text>
                         )}
+                    </View>
+                    <View style={Estilo.button}>
+                        <Button color = '#ff0000' title='Voltar' onPress={irParaCardapio} />               
                     </View>
                 </SafeAreaView>
             </View>
